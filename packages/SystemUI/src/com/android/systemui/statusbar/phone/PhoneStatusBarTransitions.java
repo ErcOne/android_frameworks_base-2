@@ -59,7 +59,7 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
         mBattery = mView.findViewById(R.id.battery);
         mClock = mView.findViewById(R.id.clock);
         mNetworkTraffic = mView.findViewById(R.id.networkTraffic);
-        mAUZONELogo = mView.findViewById(R.id.auzone_logo);
+        mAuzoneLogo = mView.findViewById(R.id.auzone_logo);
         mCenterClock = mView.findViewById(R.id.center_clock);
         mLeftClock = mView.findViewById(R.id.left_clock);		
         applyModeBackground(-1, getMode(), false /*animate*/);
