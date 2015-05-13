@@ -33,7 +33,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.internal.util.bliss.ColorHelper;
+import com.android.internal.util.auzone.ColorHelper;
 
 import com.android.systemui.statusbar.policy.BatteryController;
 

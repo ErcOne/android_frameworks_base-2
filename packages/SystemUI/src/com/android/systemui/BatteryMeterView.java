@@ -46,7 +46,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.android.internal.util.bliss.ColorHelper;
+import com.android.internal.util.auzone.ColorHelper;
 import com.android.systemui.statusbar.policy.BatteryController;
 
 public class BatteryMeterView extends View implements DemoMode,

@@ -24,10 +24,10 @@ import android.net.Uri;
 import android.provider.Settings;
 import com.android.systemui.qs.QSTile;
 
-import com.android.internal.util.bliss.Action;
-import com.android.internal.util.bliss.ActionConfig;
-import com.android.internal.util.bliss.ActionConstants;
-import com.android.internal.util.bliss.ActionHelper;
+import com.android.internal.util.auzone.Action;
+import com.android.internal.util.auzone.ActionConfig;
+import com.android.internal.util.auzone.ActionConstants;
+import com.android.internal.util.auzone.ActionHelper;
 
 import java.util.ArrayList;
 
@@ -95,7 +95,7 @@ public class SlimActionTile extends QSTile<QSTile.BooleanState> {
             return;
         }
         state.label = mCurrentActionConfig.getClickActionDescription();
-        state.iconId = ActionHelper.getActionIconUri(mContext, 
+        state.iconId = ActionHelper.getActionIconUri(mContext,
                 mCurrentActionConfig.getClickAction(), mCurrentActionConfig.getIcon());
     }
 

@@ -144,7 +144,7 @@ import com.android.internal.util.cm.WeatherControllerImpl;
 import com.android.keyguard.KeyguardHostView.OnDismissAction;
 import com.android.keyguard.ViewMediatorCallback;
 import com.android.systemui.BatteryMeterView;
-import com.android.systemui.bliss.SearchPanelSwipeView;
+import com.android.systemui.auzone.SearchPanelSwipeView;
 import com.android.systemui.BatteryLevelTextView;
 import com.android.systemui.DemoMode;
 import com.android.systemui.EventLogConstants;
@@ -346,7 +346,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     // the icons themselves
     IconMerger mNotificationIcons;
     View mNotificationIconArea;
-    TextView mBlissLabel;
+    TextView mAuzoneLabel;
 
     // [+>
     View mMoreIcon;
@@ -390,10 +390,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     private boolean mShowLabel;
     private int mShowLabelTimeout = 1000;
 
-    // Bliss logo
-    private boolean mBlissLogo;
-    private int mBlissLogoColor;
-    private ImageView blissLogo;
+    // Auzone logo
+    private boolean mAuzoneLogo;
+    private int mAuzoneLogoColor;
+    private ImageView auzoneLogo;
 
     // battery
     private BatteryMeterView mBatteryView;
@@ -521,10 +521,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     Settings.System.STATUS_BAR_BATTERY_STATUS_TEXT_COLOR),
                     false, this, UserHandle.USER_ALL);	
             resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.STATUS_BAR_BLISS_LOGO),
+                    Settings.System.STATUS_BAR_AUZONE_LOGO),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.STATUS_BAR_BLISS_LOGO_COLOR),
+                    Settings.System.STATUS_BAR_AUZONE_LOGO_COLOR),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STATUS_BAR_SHOW_TICKER),
@@ -650,17 +650,17 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             // This method reads Settings.Secure.RECENTS_LONG_PRESS_ACTIVITY
             updateCustomRecentsLongPressHandler(false);
 
-            mBlissLogo = Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_BLISS_LOGO, 0, mCurrentUserId) == 1;
-            mBlissLogoColor = Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_BLISS_LOGO_COLOR, 0xFFFFFFFF, mCurrentUserId);
-            showBlissLogo(mBlissLogo, mBlissLogoColor);
+            mAuzoneLogo = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_AUZONE_LOGO, 0, mCurrentUserId) == 1;
+            mAuzoneLogoColor = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_AUZONE_LOGO_COLOR, 0xFFFFFFFF, mCurrentUserId);
+            showAuzoneLogo(mAuzoneLogo, mAuzoneLogoColor);
 
             mGreeting = Settings.System.getStringForUser(resolver,
                     Settings.System.STATUS_BAR_GREETING,
                     UserHandle.USER_CURRENT);
-            if (mGreeting != null && mBlissLabel != null && !TextUtils.isEmpty(mGreeting)) {
-                mBlissLabel.setText(mGreeting);
+            if (mGreeting != null && mAuzoneLabel != null && !TextUtils.isEmpty(mGreeting)) {
+                mAuzoneLabel.setText(mGreeting);
             }
 
             mShowLabelTimeout = Settings.System.getIntForUser(resolver,
@@ -1116,7 +1116,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         mNotificationIconArea = mStatusBarView.findViewById(R.id.notification_icon_area_inner);
         mNotificationIcons = (IconMerger)mStatusBarView.findViewById(R.id.notificationIcons);
         mMoreIcon = mStatusBarView.findViewById(R.id.moreIcon);
-        mBlissLabel = (TextView)mStatusBarView.findViewById(R.id.bliss_custom_label);
+        mAuzoneLabel = (TextView)mStatusBarView.findViewById(R.id.auzone_custom_label);
         mNotificationIcons.setOverflowIndicator(mMoreIcon);
         mStatusBarContents = (LinearLayout)mStatusBarView.findViewById(R.id.status_bar_contents);
         mBatteryView = (BatteryMeterView) mStatusBarView.findViewById(R.id.battery);
@@ -2698,12 +2698,12 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 }
                 animateStatusBarHide(mNotificationIconArea, animate);
             } else {
-                if (mGreeting != null && mBlissLabel != null 
+                if (mGreeting != null && mAuzoneLabel != null 
                     && !TextUtils.isEmpty(mGreeting) && mShowLabel) {
                     if (animate) {
-                        mBlissLabel.setVisibility(View.VISIBLE);
-                        mBlissLabel.animate().cancel();
-                        mBlissLabel.animate()
+                        mAuzoneLabel.setVisibility(View.VISIBLE);
+                        mAuzoneLabel.animate().cancel();
+                        mAuzoneLabel.animate()
                                 .alpha(1f)
                                 .setDuration(mShowLabelTimeout)
                                 .setInterpolator(ALPHA_IN)
@@ -2792,11 +2792,11 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     }
 
     protected void labelAnimatorFadeOut(final boolean animate) {
-        if (mBlissLabel == null) {
+        if (mAuzoneLabel == null) {
             return;
         }
-        mBlissLabel.animate().cancel();
-        mBlissLabel.animate()
+        mAuzoneLabel.animate().cancel();
+        mAuzoneLabel.animate()
                 .alpha(0f)
                 .setDuration(200)
                 .setStartDelay(1200)
@@ -2804,7 +2804,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 .withEndAction(new Runnable() {
             @Override
             public void run() {
-                mBlissLabel.setVisibility(View.GONE);
+                mAuzoneLabel.setVisibility(View.GONE);
                 animateStatusBarShow(mNotificationIconArea, animate);
             }
         });
@@ -4077,13 +4077,13 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         }
     };
 
-    public void showBlissLogo(boolean show, int color) {
+    public void showAuzoneLogo(boolean show, int color) {
         if (mStatusBarView == null) return;
         ContentResolver resolver = mContext.getContentResolver();
-        blissLogo = (ImageView) mStatusBarView.findViewById(R.id.bliss_logo);
-        blissLogo.setColorFilter(color, Mode.SRC_IN);
-        if (blissLogo != null) {
-            blissLogo.setVisibility(show ? (mBlissLogo ? View.VISIBLE : View.GONE) : View.GONE);
+        auzoneLogo = (ImageView) mStatusBarView.findViewById(R.id.auzone_logo);
+        auzoneLogo.setColorFilter(color, Mode.SRC_IN);
+        if (auzoneLogo != null) {
+            auzoneLogo.setVisibility(show ? (mAuzoneLogo ? View.VISIBLE : View.GONE) : View.GONE);
         }
     }
 

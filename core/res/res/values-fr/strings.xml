@@ -820,9 +820,9 @@
     <string name="policylab_forceLock" msgid="2274085384704248431">"Verrouiller l\'écran"</string>
     <string name="policydesc_forceLock" msgid="1141797588403827138">"Gérer le mode et les conditions de verrouillage de l\'écran"</string>
     <string name="policylab_wipeData" msgid="3910545446758639713">"Effacer toutes les données"</string>
-    <string name="policydesc_wipeData" product="tablet" msgid="4306184096067756876">"Effacer les données de la tablette sans avertissement, en rétablissant la configuration d\'usine"</string>
-    <string name="policydesc_wipeData" product="tv" msgid="5816221315214527028">"Effacez les données du téléviseur sans préavis via le rétablissement de sa configuration d\'usine."</string>
-    <string name="policydesc_wipeData" product="default" msgid="5096895604574188391">"Effacer les données du téléphone sans avertissement, en rétablissant la configuration d\'usine"</string>
+    <string name="policydesc_wipeData" product="tablet" msgid="4306184096067756876">"Effacer les données de la tablette sans avertissement, en rétaauzoneant la configuration d\'usine"</string>
+    <string name="policydesc_wipeData" product="tv" msgid="5816221315214527028">"Effacez les données du téléviseur sans préavis via le rétaauzoneement de sa configuration d\'usine."</string>
+    <string name="policydesc_wipeData" product="default" msgid="5096895604574188391">"Effacer les données du téléphone sans avertissement, en rétaauzoneant la configuration d\'usine"</string>
     <string name="policylab_setGlobalProxy" msgid="2784828293747791446">"Définir le proxy global du mobile"</string>
     <string name="policydesc_setGlobalProxy" msgid="6387497466660154931">"Indiquer le proxy global à utiliser pour ce mobile lorsque les règles sont activées. Seul l\'administrateur principal du mobile peut définir le proxy global utilisé."</string>
     <string name="policylab_expirePassword" msgid="885279151847254056">"Définir exp. mot passe verr."</string>
@@ -1866,7 +1866,7 @@
     <string name="zen_mode_next_alarm_summary" msgid="5915140424683747372">"Jusqu\'à la prochaine alarme à <xliff:g id="FORMATTEDTIME">%1$s</xliff:g>"</string>
     <string name="zen_mode_next_alarm_line_one" msgid="5537042951553420916">"Jusqu\'à la prochaine alarme"</string>
     <string name="muted_by" msgid="6147073845094180001">"Son coupé par : <xliff:g id="THIRD_PARTY">%1$s</xliff:g>"</string>
-    <string name="system_error_wipe_data" msgid="6608165524785354962">"Un problème interne lié à votre appareil est survenu. Ce dernier risque d\'être instable jusqu\'à ce que vous rétablissiez la configuration d\'usine."</string>
+    <string name="system_error_wipe_data" msgid="6608165524785354962">"Un problème interne lié à votre appareil est survenu. Ce dernier risque d\'être instable jusqu\'à ce que vous rétaauzoneiez la configuration d\'usine."</string>
     <string name="system_error_manufacturer" msgid="8086872414744210668">"Un problème interne lié à votre appareil est survenu. Veuillez contacter le fabricant pour en savoir plus."</string>
     <string name="stk_cc_ussd_to_dial" msgid="5202342984749947872">"La requête USSD a été remplacée par une requête DIAL."</string>
     <string name="stk_cc_ussd_to_ss" msgid="2345360594181405482">"La requête USSD a été remplacée par une requête SS."</string>

@@ -820,9 +820,9 @@
     <string name="policylab_forceLock" msgid="2274085384704248431">"Verrouiller l\'écran"</string>
     <string name="policydesc_forceLock" msgid="1141797588403827138">"Gérer le mode et les conditions de verrouillage de l\'écran"</string>
     <string name="policylab_wipeData" msgid="3910545446758639713">"Effacer toutes les données"</string>
-    <string name="policydesc_wipeData" product="tablet" msgid="4306184096067756876">"Effacer les données de la tablette sans avertissement, en rétablissant la configuration d\'usine"</string>
+    <string name="policydesc_wipeData" product="tablet" msgid="4306184096067756876">"Effacer les données de la tablette sans avertissement, en rétaauzoneant la configuration d\'usine"</string>
     <string name="policydesc_wipeData" product="tv" msgid="5816221315214527028">"Effacer les données du téléviseur sans avertissement en effectuant une réinitialisation des paramètres d\'usine."</string>
-    <string name="policydesc_wipeData" product="default" msgid="5096895604574188391">"Effacer les données du téléphone sans avertissement, en rétablissant la configuration d\'usine"</string>
+    <string name="policydesc_wipeData" product="default" msgid="5096895604574188391">"Effacer les données du téléphone sans avertissement, en rétaauzoneant la configuration d\'usine"</string>
     <string name="policylab_setGlobalProxy" msgid="2784828293747791446">"Définir le serveur mandataire global du mobile"</string>
     <string name="policydesc_setGlobalProxy" msgid="6387497466660154931">"Indiquer le serveur mandataire global à utiliser pour ce mobile lorsque les règles sont activées. Seul l\'administrateur principal du mobile peut définir le serveur mandataire global utilisé."</string>
     <string name="policylab_expirePassword" msgid="885279151847254056">"Définir exp. mot passe verr."</string>

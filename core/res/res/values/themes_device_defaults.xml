@@ -556,7 +556,7 @@ easier.
     </style>
 
     <!-- Theme used for the intent picker activity. -->
-    <style name="Theme.DeviceDefault.Resolver.Dark" parent="Theme.Material.BlissDark.Dialog">
+    <style name="Theme.DeviceDefault.Resolver.Dark" parent="Theme.Material.AuzoneDark.Dialog">
         <item name="windowIsTranslucent">true</item>
         <item name="windowNoTitle">true</item>
         <item name="windowBackground">@color/transparent</item>

@@ -122,7 +122,7 @@ import com.android.internal.policy.PolicyManager;
 import com.android.internal.policy.impl.keyguard.KeyguardServiceDelegate;
 import com.android.internal.policy.impl.keyguard.KeyguardServiceDelegate.ShowListener;
 import com.android.internal.statusbar.IStatusBarService;
-import com.android.internal.util.bliss.Converter;
+import com.android.internal.util.auzone.Converter;
 import com.android.internal.util.gesture.EdgeGesturePosition;
 import com.android.internal.util.gesture.EdgeServiceConstants;
 import com.android.internal.widget.PointerLocationView;
@@ -7078,13 +7078,13 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     // Calculate random text color
                     Random rand = new Random();
                     String randomColor = Integer.toHexString(rand.nextInt(0xFFFFFF) & 0xFCFCFC );
-                    mBootMsgDialog.setMessage(Html.fromHtml("Powered By Team Bliss<br>" + msg +
+                    mBootMsgDialog.setMessage(Html.fromHtml("Powered By Team Auzone<br>" + msg +
                                                             "<br><b><font color=\"#" + randomColor + "\">" +
                                                             currentPackageName +
                                                             "</font></b>" + "<br><br>Please wait for the optimization process to finish."));
                 }
                 else {
-                    mBootMsgDialog.setMessage("Powered By Team Bliss\n\n" + msg
+                    mBootMsgDialog.setMessage("Powered By Team Auzone\n\n" + msg
                     + "\n\nPlease wait for the optimization process to finish.");
                 }
             }

@@ -4340,16 +4340,16 @@ public final class Settings {
         public static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
 
         /**
-         * Statusbar Bliss logo
+         * Statusbar Auzone logo
          * @hide
          */
-        public static final String STATUS_BAR_BLISS_LOGO = "status_bar_bliss_logo";
+        public static final String STATUS_BAR_Auzone_LOGO = "status_bar_auzone_logo";
 
 		/**
-         * Statusbar Bliss logo color setting
+         * Statusbar Auzone logo color setting
          * @hide
          */
-        public static final String STATUS_BAR_BLISS_LOGO_COLOR = "status_bar_bliss_logo_color";
+        public static final String STATUS_BAR_Auzone_LOGO_COLOR = "status_bar_auzone_logo_color";
 
 		/**
          * Status bar greeting

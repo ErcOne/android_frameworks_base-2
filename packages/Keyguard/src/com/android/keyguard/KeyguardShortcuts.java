@@ -31,10 +31,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.android.internal.util.bliss.AppHelper;
-import com.android.internal.util.bliss.ActionHelper;
-import com.android.internal.util.bliss.ActionConfig;
-import com.android.internal.util.bliss.Action;
+import com.android.internal.util.auzone.AppHelper;
+import com.android.internal.util.auzone.ActionHelper;
+import com.android.internal.util.auzone.ActionConfig;
+import com.android.internal.util.auzone.Action;
 import com.android.internal.widget.LockPatternUtils;
 
 import com.android.keyguard.R;
