@@ -4343,13 +4343,13 @@ public final class Settings {
          * Statusbar Auzone logo
          * @hide
          */
-        public static final String STATUS_BAR_Auzone_LOGO = "status_bar_auzone_logo";
+        public static final String STATUS_BAR_AUZONE_LOGO = "status_bar_auzone_logo";
 
 		/**
          * Statusbar Auzone logo color setting
          * @hide
          */
-        public static final String STATUS_BAR_Auzone_LOGO_COLOR = "status_bar_auzone_logo_color";
+        public static final String STATUS_BAR_AUZONE_LOGO_COLOR = "status_bar_auzone_logo_color";
 
 		/**
          * Status bar greeting
